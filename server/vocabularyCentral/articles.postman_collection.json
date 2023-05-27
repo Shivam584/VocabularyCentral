@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "ff569f6f-e062-4d1b-8473-7ce06058e2d7",
+		"name": "articles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26347946"
+	},
+	"item": [
+		{
+			"name": "post article",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyNDkwMTExLCJpYXQiOjE2ODI0ODk4MTEsImp0aSI6IjA4ZTBkMTQ0MDVhMTRmNGZhZDQ0MTI2ZjU0YWZkYzA1IiwidXNlcl9pZCI6MX0.SrvfCJB-GJSJZ70RfO6u6I31Ln4uDQqOpBrzbvSCjss",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ArticleName\": \"greetings\",\r\n    \"description\": \"This article teach how to greet a person in mutliple languages\",\r\n    \"cards\": [\r\n        { \r\n            \"cardValue\":\"Hello! my name is shivam\"\r\n        },\r\n        { \r\n            \"cardValue\": \"Hi! Shivam my name is Sobhan\"\r\n        },\r\n        { \r\n            \"cardValue\": \"Nice to meet you Sobhan\"\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/articles/article/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"articles",
+						"article",
+						"post",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "post article",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ArticleName\": \"greetings\",\r\n    \"description\": \"This article teach how to greet a person in mutliple languages\",\r\n    \"cards\": [\r\n        { \r\n            \"cardValue\":\"Hello! my name is shivam\"\r\n        },\r\n        { \r\n            \"cardValue\": \"Hi! Shivam my name is Sobhan\"\r\n        },\r\n        { \r\n            \"cardValue\": \"Nice to meet you Sobhan\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/articles/article/post/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"articles",
+								"article",
+								"post",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2023 06:19:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Data saved!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get article",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyNDkyMzMyLCJpYXQiOjE2ODI0OTIwMzIsImp0aSI6ImZiMDM5NjkwYThlZTQwYmZhZDg4ODY1OTU5ZTRiMzI0IiwidXNlcl9pZCI6MX0.6eLuIRLh3qaqLMmlcgLyrtY2mW2hAD73zqLQ9YiYDC0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/articles/article/get/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"articles",
+						"article",
+						"get",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get article",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/articles/article/get/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"articles",
+								"article",
+								"get",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2023 06:54:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Length",
+							"value": "336"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"ArticleName\": \"greetings\",\n    \"description\": \"This article teach how to greet a person in mutliple languages\",\n    \"cards\": [\n        {\n            \"id\": 1,\n            \"cardValue\": \"Hello! my name is shivam\",\n            \"ArticleID\": 1\n        },\n        {\n            \"id\": 2,\n            \"cardValue\": \"Hi! Shivam my name is Sobhan\",\n            \"ArticleID\": 1\n        },\n        {\n            \"id\": 3,\n            \"cardValue\": \"Nice to meet you Sobhan\",\n            \"ArticleID\": 1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "delete article",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyNDkyNzMzLCJpYXQiOjE2ODI0OTI0MzMsImp0aSI6IjFlNmIzMDQ4ZTIzYTQ5MWJiODdlNWNhYWUzNGRlYzRmIiwidXNlcl9pZCI6MX0.LR-KwT7f0PNZxTkFLIMDHE_oiUDYHxAVGW3oAuLfTEM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/articles/article/delete/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"articles",
+						"article",
+						"delete",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete article",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/articles/article/delete/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"articles",
+								"article",
+								"delete",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2023 07:00:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": {\n        \"msg\": \"file not found\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyNDk1NDU2LCJpYXQiOjE2ODI0OTUxNTYsImp0aSI6ImQzZDBkOWI3YWVkMzQ2NTI4YTdlMmU0ZTgzMTMzODQ0IiwidXNlcl9pZCI6MX0.T2stD9QI4sqI1psjyF9PrYWcQfLUYeSiEsDcpbc-rr8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/articles/card/get/4/te/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"articles",
+						"card",
+						"get",
+						"4",
+						"te",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyNDk1NDU2LCJpYXQiOjE2ODI0OTUxNTYsImp0aSI6ImQzZDBkOWI3YWVkMzQ2NTI4YTdlMmU0ZTgzMTMzODQ0IiwidXNlcl9pZCI6MX0.T2stD9QI4sqI1psjyF9PrYWcQfLUYeSiEsDcpbc-rr8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cards\": [\r\n        {\r\n            \"cardValue\": \"Hello! my name is shivam\"\r\n        },\r\n        {\r\n            \"cardValue\": \"Hi! Shivam my name is Sobhan\"\r\n        },\r\n        {\r\n            \"cardValue\": \"Nice to meet you Sobhan\"\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/articles/card/post/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"articles",
+						"card",
+						"post",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyNTE1MjU4LCJpYXQiOjE2ODI1MTQ5NTgsImp0aSI6IjNkNTZiMmQ5MTkwYjRjN2NhMzkxOTlmZGY3ZWQ5NTI2IiwidXNlcl9pZCI6MX0.4rEbTTsjARz7zoOh85-ejOUebaTNrEqZo6kmahT-jVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/articles/card/delete/12/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"articles",
+						"card",
+						"delete",
+						"12",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
